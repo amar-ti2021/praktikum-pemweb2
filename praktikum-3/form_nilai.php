@@ -105,6 +105,25 @@
             elseif ($total_nilai <= 84) :
                 $grade = "B";
             endif;
+            switch ($grade) {
+                case "A":
+                    $predikat = "Sangat Memuaskan";
+                    break;
+                case "B":
+                    $predikat = "Memuaskan";
+                    break;
+                case "C":
+                    $predikat = "Cukup";
+                    break;
+                case "D":
+                    $predikat = "Kurang";
+                    break;
+                case "E":
+                    $predikat = "Sangat Kurang";
+                    break;
+                default:
+                    $predikat = "Tidak Ada";
+            }
             if ($total_nilai > 55) :
                 $kelulusan = "Lulus";
             endif;
@@ -116,6 +135,10 @@
             <div class="row">
                 <div class="col-5">Grade</div>
                 <div class="col-7">: <?php echo $grade; ?></div>
+            </div>
+            <div class="row">
+                <div class="col-5">Predikat</div>
+                <div class="col-7">: <?php echo $predikat; ?></div>
             </div>
             <div class="row">
                 <div class="col-5">Kelulusan</div>
