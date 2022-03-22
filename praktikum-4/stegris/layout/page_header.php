@@ -1,5 +1,5 @@
 <?php
-require_once "html_head.php";
+require_once "./layout/html_head.php";
 ?>
 
 <body class="sb-nav-fixed">
@@ -81,6 +81,16 @@ require_once "html_head.php";
                                         <a class="nav-link" href="500.php">500 Page</a>
                                     </nav>
                                 </div>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseData" aria-expanded="false" aria-controls="collapseData">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            Data Mahasiswa
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseData" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="form-nilai-ujian.php">Form Nilai Ujian</a>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>

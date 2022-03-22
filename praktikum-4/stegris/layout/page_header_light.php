@@ -1,5 +1,5 @@
 <?php
-require_once "html_head.php";
+require_once "./layout/html_head.php";
 ?>
 
 <body class="sb-nav-fixed">
