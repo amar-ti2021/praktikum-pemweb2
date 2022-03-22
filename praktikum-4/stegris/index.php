@@ -1,5 +1,5 @@
 <?php
-$title = "Dashboard - SB Admin";
+$title = "Dashboard";
 require_once 'layout/page_header.php';
 ?>
 <main>
