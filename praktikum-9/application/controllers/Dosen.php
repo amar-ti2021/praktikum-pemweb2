@@ -27,8 +27,18 @@ class Dosen extends CI_Controller
 
         $list_dsn = [$this->dsn1, $this->dsn2, $this->dsn3];
         $data['list_dsn'] = $list_dsn;
-        $this->load->view('header');
+        $this->load->view('layout/header');
+        $this->load->view('layout/navbar');
+        $this->load->view('layout/sidebar');
         $this->load->view('dosen/index', $data);
-        $this->load->view('footer');
+        $this->load->view('layout/footer');
+    }
+    public function create()
+    {
+        $this->load->view('layout/header');
+        $this->load->view('layout/navbar');
+        $this->load->view('layout/sidebar');
+        $this->load->view('dosen/create');
+        $this->load->view('layout/footer');
     }
 }
