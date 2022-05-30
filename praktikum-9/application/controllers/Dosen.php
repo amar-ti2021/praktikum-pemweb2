@@ -41,4 +41,22 @@ class Dosen extends CI_Controller
         $this->load->view('dosen/create');
         $this->load->view('layout/footer');
     }
+    public function save()
+    {
+        $this->load->model('dosen_model', 'dsn');
+        $this->dsn->id = 4;
+        $this->dsn->nidn = $this->input->post('nidn');
+        $this->dsn->nama = $this->input->post('nama');
+        $this->dsn->gender = $this->input->post('gender');
+        $this->dsn->tmp_lahir = $this->input->post('tmp_lahir');
+        $this->dsn->tgl_lahir = $this->input->post('tgl_lahir');
+        $this->dsn->pendidikan = $this->input->post('pendidikan');
+        $data['dsn'] = $this->dsn;
+
+        $this->load->view('layout/header');
+        $this->load->view('layout/navbar');
+        $this->load->view('layout/sidebar');
+        $this->load->view('dosen/view', $data);
+        $this->load->view('layout/footer');
+    }
 }
